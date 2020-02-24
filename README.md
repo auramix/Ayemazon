@@ -1,8 +1,15 @@
 
 ## Table of Contents
+1. [Overview](#overview)
+2. [Environment Setup Local](#Environment)
+3. [API Usage](#API)
 
-1. [Environment Setup Local](#Environment)
-2. [API Usage](#API)
+
+## Overview
+> This project consisted of 3 parts:
+> 1. Adopt legacy code, make application functional and write CRUD functions.
+> 2. Seed database with 10M primary records and do local stress testing w/artillery.io & New Relic ahead of deployment to AWS.
+> 3. Deploy to AWS and scale server response to handle as much load as possible. Loader.io used to stress test deployed service.
 
 ## Environment Setup Local
 
@@ -51,6 +58,8 @@ npm run server
 **`GET`** path **`/product/:id`**
 - Fetches product info for the given id, including product availability
 
+## Local server routes - internal, not exposed
+
 **`POST`** path **`/`**
 - Creates record in database table of choice
 - Provide request body with a table name and data to insert e.g. `{ table: 'your_table_name', data: { col_1: 'someValue' } }`
@@ -62,11 +71,3 @@ npm run server
 **`DELETE`** path **`/`**
 - Deletes record in database table of choice
 - Provide request body with a table name and id e.g. `{ table: 'your_table_name', id: 86 }`
-```
-
-
-
-
-
-
-
