@@ -1,8 +1,8 @@
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Environment Setup Local](#Environment)
-3. [API Usage](#API)
+2. [Environment Setup](#environment)
+3. [API Usage](#api)
 
 
 ## Overview
@@ -11,7 +11,7 @@
 > 2. Seed database with 10M primary records and do local stress testing w/artillery.io & New Relic ahead of deployment to AWS.
 > 3. Deploy to AWS and scale server response to handle as much load as possible. Loader.io used to stress test deployed service.
 
-## Environment Setup Local
+## Environment
 
 *Install MySQL*
 ```console
@@ -53,7 +53,7 @@ npm run react-prod
 npm run server
 ```
 
-## API Use
+## API
 
 **`GET`** path **`/product/:id`**
 - Fetches product info for the given id, including product availability
